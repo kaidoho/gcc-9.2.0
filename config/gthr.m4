@@ -21,6 +21,7 @@ case $1 in
     tpf)	thread_header=config/s390/gthr-tpf.h ;;
     vxworks)	thread_header=config/gthr-vxworks.h ;;
     win32)	thread_header=config/i386/gthr-win32.h ;;
+    zephyr)	thread_header=config/gthr-zephyr.h ;;
 esac
 AC_SUBST(thread_header)
 ])

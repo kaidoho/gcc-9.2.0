@@ -318,6 +318,10 @@ case "${host_os}" in
   vxworks)
     os_include_dir="os/vxworks"
     ;;
+  zephyr*)
+    os_include_dir="os/generic"
+    atomicity_dir="cpu/generic/atomicity_builtins"
+    ;;
   *)
     os_include_dir="os/generic"
     ;;

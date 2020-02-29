@@ -34,9 +34,13 @@
    target headers.  */
 extern void abort (void);
 
+#ifdef __zephyr__
+#include <stdbool.h>
+#else
 /* Definitions for C++ runtime support routines.  We make these weak
    declarations to avoid pulling in libsupc++ unnecessarily.  */
 typedef unsigned char bool;
+#endif
 
 typedef struct _ZSt9type_info type_info; /* This names C++ type_info type */
 enum __cxa_type_match_result
